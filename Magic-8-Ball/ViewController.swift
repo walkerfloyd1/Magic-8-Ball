@@ -9,14 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var ballArray = ["ball1", "ball2", "ball3", "ball4", "ball5"]
+    
+    var randomBallNumber : Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        randomBallNumber = Int (arc4random_uniform(4))
+        imageView.image = UIImage(named: ballArray[randomBallNumber])
     }
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func askButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    func newBallImage() {
+        
     }
     
 }
