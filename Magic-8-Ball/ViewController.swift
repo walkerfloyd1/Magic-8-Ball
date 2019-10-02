@@ -16,17 +16,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        randomBallNumber = Int (arc4random_uniform(4))
-        imageView.image = UIImage(named: ballArray[randomBallNumber])
+        newBallImage()
     }
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func askButtonPressed(_ sender: UIButton) {
-        
+        newBallImage()
     }
     
     func newBallImage() {
-        
+        randomBallNumber = Int (arc4random_uniform(4))
+        imageView.image = UIImage(named: ballArray[randomBallNumber])
     }
     
 }
